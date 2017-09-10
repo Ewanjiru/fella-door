@@ -3,6 +3,7 @@ import { Card, CardText } from 'material-ui/Card';
 import Webcam from 'react-webcam';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import StreamContent from './stream.jsx';
 
 const style = {
   marginRight: 10,
@@ -17,9 +18,11 @@ const Video = () => (
           <ContentAdd />
         </FloatingActionButton>
       </div>
+
       <div className="webcam">
         <CardText>
-          <Webcam />
+          <StreamContent />
+          <video id="selfVideo"></video>
         </CardText>
       </div>
     </Card>
