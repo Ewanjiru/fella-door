@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // Start Express http server on port 8080
-const webServer = http.createServer(app).listen(8080);
+const webServer = http.createServer(app).listen(process.env.PORT || 8080);
 
 // Start Socket.io so it attaches itself to Express server
 const socketServer = socketIo.listen(webServer, { 'log level': 1 });
