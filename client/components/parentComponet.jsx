@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Sidebar from './sidebar.jsx';
 import Video from './video.jsx';
 
+
 export default class ParentComponet extends React.Component {
   constructor(props) {
     super(props);
