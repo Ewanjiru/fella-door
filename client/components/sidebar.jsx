@@ -7,12 +7,12 @@ const Sidebar = props => (
   <div>
     <div id="timer">
       <ReactCountdownClock
-        seconds={2420}
+        seconds={60}
         color="#000"
         alpha={0.9}
         font={'Georgia'}
         size={180}
-        onComplete=""
+        onComplete=''
       />
     </div>
     <div className="sidebar-wrapper">

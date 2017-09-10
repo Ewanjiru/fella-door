@@ -1,37 +1,17 @@
 import React from 'react';
 import { Card, CardText } from 'material-ui/Card';
 import Webcam from 'react-webcam';
-<<<<<<< HEAD
-import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import StreamContent from './stream.jsx';
-=======
 import RaisedButton from 'material-ui/RaisedButton';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
->>>>>>> f911399c59b262d273894ba1e4e402ae31a25b6d
 
 const style = {
   marginRight: 10,
   marginBottom: 2,
 };
 
-<<<<<<< HEAD
-const Video = () => (
-  <div className="video-wrapper">
-    <Card>
-      <div className="button_wrapper">
-        <FloatingActionButton style={style}>
-          <ContentAdd />
-        </FloatingActionButton>
-      </div>
-
-      <div className="webcam">
-        <CardText>
-          <StreamContent />
-          <video id="selfVideo"></video>
-        </CardText>
-=======
 class Video extends React.Component {
   constructor(props) {
     super(props);
@@ -56,12 +36,12 @@ class Video extends React.Component {
 
           </div>
           <div className="webcam">
-            <CardText>
-              <Webcam />
+            <CardText id="videos">
+              <StreamContent />
+              <video id="selfVideo"></video>
             </CardText>
           </div>
         </Card>
->>>>>>> f911399c59b262d273894ba1e4e402ae31a25b6d
       </div>
     );
   }
