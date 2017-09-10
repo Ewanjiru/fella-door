@@ -6,12 +6,17 @@ import '../css/style.scss';
 
 export default class App extends React.Component {
   render() {
+    const style = {
+      height: 100,
+      font: 'Georgia',
+    };
     return (
       <div>
         <MuiThemeProvider>
           <AppBar
-            title="Title"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            title="FellaDoor"
+            showMenuIconButton={false}
+            style={style}
           />
         </MuiThemeProvider>
         <ParentComponet />

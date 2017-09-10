@@ -1,18 +1,29 @@
 import React from 'react';
 import ReactCountdownClock from 'react-countdown-clock';
-import Paper from 'material-ui/Paper';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 
-const Sidebar = () => (
-  <div className="sidebar-wrapper">
-    <Paper zDepth={2} className="paper">
+const Sidebar = props => (
+  <div>
+    <div id="timer">
       <ReactCountdownClock
-        seconds={60}
+        seconds={2420}
         color="#000"
         alpha={0.9}
+        font={'Georgia'}
         size={180}
         onComplete=""
       />
-    </Paper>
+    </div>
+    <div className="sidebar-wrapper">
+      <div>
+        <Card className="info-wrapper">
+          <CardText>
+            popping up infor about user!
+          </CardText>
+        </Card>
+      </div>
+    </div>
   </div>
 );
 

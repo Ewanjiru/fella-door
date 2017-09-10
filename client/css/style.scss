@@ -1,5 +1,7 @@
-.sidebar-wrapper {
-  width: 40%;
+.sidebar-wrapper{
+  margin-top: 15%;
+  width: 29%;
+  float: left;
 }
 .button_wrapper{
     height: 20%;
@@ -21,14 +23,16 @@
   display: inline-block;
 }
 
-.timer{
-  width: 30%;
-}
 .video-wrapper{
-  width: 65%;
-  float: right;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 30%;
   margin-right: 10%;
   margin-top:2%;
   height: 70%;
+}
+.info-wrapper{
+ height: 150px;
+}
+.button_wrapper{
+  justify-content: right;
 }
