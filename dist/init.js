@@ -70,15 +70,6 @@ function performCall(otherEasyrtcid) {
   var successCB = function() {};
   var failureCB = function() {};
   easyrtc.call(otherEasyrtcid, successCB, failureCB);
-  sec = 60
-  setInterval(function(){
-       sec--;
-       if (sec==0){
-          var connect = randomChat()
-          console.log("switching to"+ connect)
-          performCall(connect)
-       }
-    },500);
 }
  
  
