@@ -1,6 +1,13 @@
 #demoContainer {
   position: relative;
 }
+
+#easyrtcErrorDialog{
+  display: none !important;
+}
+.info-wrapper{
+  display: none;
+}
 #connectControls {
   float:left;
   width:250px;
