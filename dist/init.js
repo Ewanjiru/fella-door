@@ -35,7 +35,7 @@ function convertListToButtons (roomName, data, isPrimary) {
         performCall(easyrtcid);
       };*/
     }(easyrtcid);
-    performCall(connections[0]
+    performCall(connections[0])
     console.log(connections)
     /*if(connections.length==1){
       performCall(connections[0])
