@@ -35,13 +35,14 @@ function convertListToButtons (roomName, data, isPrimary) {
         performCall(easyrtcid);
       };*/
     }(easyrtcid);
+    performCall(connections[0]
     console.log(connections)
-    if(connections.length==1){
+    /*if(connections.length==1){
       performCall(connections[0])
     }
     else if(connections.length>0){
       timer()
-  }
+  }*/
     //var label = document.createTextNode(easyrtc.idToName(easyrtcid));
     //button.appendChild(label);
     //otherClientDiv.appendChild(button);
