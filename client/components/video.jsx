@@ -25,20 +25,15 @@ class Video extends React.Component {
     return (
       <div className="video-wrapper">
         <Card>
-          <div className="button_wrapper">
-            <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-              <MenuItem value={5} primaryText="5minutes" />
-              <MenuItem value={10} primaryText="10minutes" />
-              <MenuItem value={15} primaryText="15minutes" />
-            </DropDownMenu>
-            <RaisedButton label="End Call" secondary={true} style={style} />
-            <RaisedButton label="Next Call" primary={true} style={style} />
-
-          </div>
           <div className="webcam">
             <CardText id="videos">
               <StreamContent />
               <video id="selfVideo"></video>
+              <div className="button_wrapper">
+                <RaisedButton label="Next Call" primary={true} style={style} />
+                <RaisedButton label="End Call" secondary={true} style={style} />
+                
+              </div>
             </CardText>
           </div>
         </Card>
