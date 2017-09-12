@@ -6,16 +6,19 @@
 .button_wrapper{
     height: 20%;
     display: inline-block;
-    margin-left: 12%;
+    margin-left: 40%;
+    background-color: rgba(158, 158, 158, 0);
     padding-bottom: 3%;
-    width: 78%;
+    width: 30%;
+    margin-top: 40%;
 }
-.webcam{
-  height: 80%;
-  width: 90%;
-  display: inline-block;
-  margin-left: 10%;
-}
+// .webcam{
+//   height: 500px;
+//   margin-top: 0px;
+//   width: 90%;
+//   display: inline-block;
+//   margin-left: 5%;
+// }
 .paper{
  height: 100%;
   width: 100%;
@@ -24,15 +27,46 @@
 }
 
 .video-wrapper{
-  width: 60%;
-  margin-left: 30%;
+  width: 997px;
+  margin-left: 20%;
   margin-right: 10%;
   margin-top:2%;
-  height: 70%;
+  height: 500px;
 }
+
+.video-wrapper > div > div{
+  background-color:gray;
+  padding-top: 20px;
+  height: 500px;
+}
+
 .info-wrapper{
  height: 150px;
 }
 .button_wrapper{
   justify-content: right;
+}
+
+#selfVideo {
+  height:150px;
+  width:200px;
+  float:left;
+  border:1px solid gray;
+  margin-bottom: 381px;
+  margin-right: 75px;
+  position: absolute;
+  right: 0px !important;
+  bottom: 0px !important;
+  z-index: 100 !important;
+}
+
+#callerVideo {
+  height: 92% !important;
+  width:80% !important;
+  border:1px solid gray;
+  position: absolute;
+  background-color: red;
+  margin-top: 0px;
+  margin-bottom: 200px;
+  top: 0px !important;
 }
