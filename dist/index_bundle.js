@@ -38438,25 +38438,18 @@ var Video = function (_React$Component) {
           null,
           _react2.default.createElement(
             'div',
-            { className: 'button_wrapper' },
-            _react2.default.createElement(
-              _DropDownMenu2.default,
-              { value: this.state.value, onChange: this.handleChange },
-              _react2.default.createElement(_MenuItem2.default, { value: 5, primaryText: '5minutes' }),
-              _react2.default.createElement(_MenuItem2.default, { value: 10, primaryText: '10minutes' }),
-              _react2.default.createElement(_MenuItem2.default, { value: 15, primaryText: '15minutes' })
-            ),
-            _react2.default.createElement(_RaisedButton2.default, { label: 'End Call', secondary: true, style: style }),
-            _react2.default.createElement(_RaisedButton2.default, { label: 'Next Call', primary: true, style: style })
-          ),
-          _react2.default.createElement(
-            'div',
             { className: 'webcam' },
             _react2.default.createElement(
               _Card.CardText,
               { id: 'videos' },
               _react2.default.createElement(_stream2.default, null),
-              _react2.default.createElement('video', { id: 'selfVideo' })
+              _react2.default.createElement('video', { id: 'selfVideo' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'button_wrapper' },
+                _react2.default.createElement(_RaisedButton2.default, { label: 'Next Call', primary: true, style: style }),
+                _react2.default.createElement(_RaisedButton2.default, { label: 'End Call', secondary: true, style: style })
+              )
             )
           )
         )
@@ -43673,7 +43666,7 @@ exports = module.exports = __webpack_require__(431)(undefined);
 
 
 // module
-exports.push([module.i, ".sidebar-wrapper {\n  margin-top: 15%;\n  width: 29%;\n  float: left; }\n\n.button_wrapper {\n  height: 20%;\n  display: inline-block;\n  margin-left: 12%;\n  padding-bottom: 3%;\n  width: 78%; }\n\n.webcam {\n  height: 80%;\n  width: 90%;\n  display: inline-block;\n  margin-left: 10%; }\n\n.paper {\n  height: 100%;\n  width: 100%;\n  margin: 20;\n  display: inline-block; }\n\n.video-wrapper {\n  width: 60%;\n  margin-left: 30%;\n  margin-right: 10%;\n  margin-top: 2%;\n  height: 70%; }\n\n.info-wrapper {\n  height: 150px; }\n\n.button_wrapper {\n  justify-content: right; }\n", ""]);
+exports.push([module.i, ".sidebar-wrapper {\n  margin-top: 15%;\n  width: 29%;\n  float: left; }\n\n.button_wrapper {\n  height: 20%;\n  display: inline-block;\n  margin-left: 40%;\n  background-color: rgba(158, 158, 158, 0);\n  padding-bottom: 3%;\n  width: 30%;\n  margin-top: 40%; }\n\n.paper {\n  height: 100%;\n  width: 100%;\n  margin: 20;\n  display: inline-block; }\n\n.video-wrapper {\n  width: 997px;\n  margin-left: 20%;\n  margin-right: 10%;\n  margin-top: 2%;\n  height: 500px; }\n\n.video-wrapper > div > div {\n  background-color: gray;\n  padding-top: 20px;\n  height: 500px; }\n\n.info-wrapper {\n  height: 150px; }\n\n.button_wrapper {\n  justify-content: right; }\n\n#selfVideo {\n  height: 150px;\n  width: 200px;\n  float: left;\n  border: 1px solid gray;\n  margin-bottom: 381px;\n  margin-right: 75px;\n  position: absolute;\n  right: 0px !important;\n  bottom: 0px !important;\n  z-index: 100 !important; }\n\n#callerVideo {\n  height: 92% !important;\n  width: 80% !important;\n  border: 1px solid gray;\n  position: absolute;\n  background-color: red;\n  margin-top: 0px;\n  margin-bottom: 200px;\n  top: 0px !important; }\n", ""]);
 
 // exports
 
