@@ -7,6 +7,7 @@ var connections=[]
 function connect() {
   socket.on("message",(data)=>{
     performCall(data)
+    alert(data)
   })
   easyrtc.setVideoDims(1280,720);
   easyrtc.setRoomOccupantListener(convertListToButtons);
@@ -24,7 +25,6 @@ function clearConnectList() {
  
 function convertListToButtons (roomName, data, isPrimary) {
   clearConnectList();
-  console.log(data)
   var otherClientDiv = document.getElementById("otherClients");
   for(var easyrtcid in data) {
     connections.push(easyrtcid)
@@ -36,7 +36,7 @@ function convertListToButtons (roomName, data, isPrimary) {
       };*/
     }(easyrtcid);
     //performCall(connections[0])
-    console.log(connections)
+   // console.log(connections)
     /*if(connections.length==1){
       performCall(connections[0])
     }
