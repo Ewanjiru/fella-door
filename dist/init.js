@@ -6,11 +6,11 @@ var connections=[]
  
 function connect() {
   socket.on("message",(data)=>{
-    alert(data)
+    performCall(data)
   })
   easyrtc.setVideoDims(1280,720);
   easyrtc.setRoomOccupantListener(convertListToButtons);
-  easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
+  easyrtc.easyApp("felladoor", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
  }
 
   
@@ -35,7 +35,7 @@ function convertListToButtons (roomName, data, isPrimary) {
         performCall(easyrtcid);
       };*/
     }(easyrtcid);
-    performCall(connections[0])
+    //performCall(connections[0])
     console.log(connections)
     /*if(connections.length==1){
       performCall(connections[0])
@@ -48,20 +48,7 @@ function convertListToButtons (roomName, data, isPrimary) {
     //otherClientDiv.appendChild(button);
   }
 
-function randomChat(){
-  return connections[Math.floor(Math.random()*connections.length)];
-}
 
-function timer(){
-  sec=60
-      setInterval(function(){
-       sec--;
-       if (sec==0){
-          var connect = randomChat
-          performCall(connect)
-       }
-      },500);
-}
  
  
 function performCall(otherEasyrtcid) {
