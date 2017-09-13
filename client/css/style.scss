@@ -1,72 +1,68 @@
-.sidebar-wrapper{
-  margin-top: 15%;
-  width: 29%;
-  float: left;
-}
-.button_wrapper{
-    height: 20%;
-    display: inline-block;
-    margin-left: 315px;
-    background-color: rgba(158, 158, 158, 0);
-    padding-bottom: 3%;
-    width: 30%;
-    margin-top: 420px;
-}
-// .webcam{
-//   height: 500px;
-//   margin-top: 0px;
-//   width: 90%;
-//   display: inline-block;
-//   margin-left: 5%;
-// }
-.paper{
- height: 100%;
-  width: 100%;
-  margin: 20;
-  display: inline-block;
+#demoContainer {
+  position: relative;
 }
 
-.video-wrapper{
-  width: 997px;
-  margin-left: 20%;
-  margin-right: 10%;
-  margin-top:0px;
-  height: 640px;
+body{
+  margin:0px !important;
+  padding:0px !important;
+  background-color:#16171d !important;
 }
 
-.video-wrapper > div > div{
-  background-color:gray;
-  padding-top: 20px;
-  height: 600px;
+#easyrtcErrorDialog{
+  display: none !important;
 }
-
 .info-wrapper{
- height: 150px;
+  display: none;
 }
-.button_wrapper{
-  justify-content: right;
+#connectControls {
+  float:left;
+  width:250px;
+  text-align:center;
+  border: 2px solid black;
+  position: relative;
 }
 
+.react-countdown-clock{
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:100 !important;
+}
+
+.react-countdown-clock canvas{
+  width:90px !important;
+  height:90px !important;
+}
+
+#otherClients {
+  height:200px;
+  overflow-y:scroll;
+  position: relative;
+}
 #selfVideo {
-  height:150px;
-  width:200px;
   float:left;
   border:1px solid gray;
-  margin-bottom: 381px;
-  margin-right: 75px;
+  width:200px !important;
+  clear: both !important; 
   position: absolute;
-  right: 0px !important;
-  bottom: 0px !important;
+  right: 5px !important;
+  top: 5px !important;
   z-index: 100 !important;
+  border:transparent;
+  -webkit-box-shadow: -1px -1px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 23px 0px rgba(0,0,0,0.75);
+box-shadow: -1px -1px 23px 0px rgba(0,0,0,0.75);
+}
+#callerVideo {
+  width:100% !important;
+  max-height:100vh !important;
+  border:transparent !important;
+  position: absolute;
+  top: 0px !important;
 }
 
-#callerVideo {
-  height: 92% !important;
-  width:80% !important;
-  border:1px solid gray;
-  position: absolute;
-  background-color: black;
-  margin-top: 0px;
-  margin-bottom: 200px;
-  top: 0px !important;
+#videos{
+  position: relative;
+  width:100% !important;
+  height: 500px !important;
 }

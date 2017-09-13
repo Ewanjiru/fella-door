@@ -1,7 +1,7 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Sidebar from './sidebar.jsx';
+import Counter from './counter.jsx';
 import Video from './video.jsx';
+import StreamContent from './stream.jsx';
 
 
 export default class ParentComponet extends React.Component {
@@ -12,12 +12,9 @@ export default class ParentComponet extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <MuiThemeProvider>
-          <Sidebar />
-        </MuiThemeProvider>
-        <MuiThemeProvider>
+          <Counter />
+          <StreamContent/>
           <Video />
-        </MuiThemeProvider>
       </div>
     );
   }

@@ -23,14 +23,6 @@ export default class App extends React.Component {
     };
     return (
       <div>
-        <MuiThemeProvider muiTheme={muiTheme}>
-          <AppBar
-            title="Felladoor"
-            titleStyle={{ marginLeft: 52 + '%' }}
-            showMenuIconButton={false}
-            style={style}
-          />
-        </MuiThemeProvider>
         <ParentComponet />
       </div>);
   }

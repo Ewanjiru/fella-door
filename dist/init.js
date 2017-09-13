@@ -8,7 +8,7 @@ function connect() {
   socket.on("message",(data)=>{
     alert(data)
   })
-  easyrtc.setVideoDims(640,480);
+  easyrtc.setVideoDims(1280,720);
   easyrtc.setRoomOccupantListener(convertListToButtons);
   easyrtc.easyApp("easyrtc.audioVideoSimple", "selfVideo", ["callerVideo"], loginSuccess, loginFailure);
  }
