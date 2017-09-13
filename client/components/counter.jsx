@@ -1,17 +1,44 @@
 import React from 'react';
 import ReactCountdownClock from 'react-countdown-clock';
+import io from "socket.io-client";
 
-const Counter = props => (
-    <div id="timer">
+class Counter extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={time:0}
+    this.Signalcall=this.Signalcall.bind(this)
+  }
+
+  componentDidMount(){
+    console.log("hellox")
+    const socket = io();
+    console.log("hello data"+Object.keys(socket))
+    this.Signalcall
+    socket.on("message",(data)=>{
+      console.log(this.state.time)
+      this.setState({time:60})
+      console.log(this.state.time)
+    })
+  }
+
+  Signalcall(){
+    this.setState({time:0})
+    fetch("http://127.0.0.1:8080/switch")
+    console.log("yo")
+  }
+
+  render(){
+    return(<div id="timer">
       <ReactCountdownClock
-        seconds={60}
+        seconds={this.state.time}
         color="#5a5768"
         alpha={0.9}
         font={'Georgia'}
         size={180}
-        onComplete=''
+        onComplete={this.Signalcall}
       />
-    </div>
-);
+    </div>)
+  }
+}
 
 export default Counter;

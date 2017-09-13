@@ -7,7 +7,7 @@ class Controls extends React.Component{
         return(
                <div className="button_wrapper">
                     
-                        <FloatingActionButton label="Next" primary={true}/>
+                <FloatingActionButton label="Next" primary={true} onClick={()=>{fetch("http://127.0.0.1:8080/switch")}}/>
                 <FloatingActionButton label="End" secondary={true} />
             
               </div>

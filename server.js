@@ -4,6 +4,7 @@ const express = require('express'); // web framework external module
 const serveStatic = require('serve-static'); // serve static files
 const socketIo = require('socket.io'); // web socket external module
 const easyrtc = require('./lib/easyrtc_server'); // EasyRTC external module
+const pub = require('./lib/easyrtc_public_obj');
 
 // Set process name
 process.title = 'node-easyrtc';
@@ -15,15 +16,33 @@ app.get('/', (req, res) => {
   res.senFile(`${__dirname}/dist/index.html`);
 });
 
+
+
 // Start Express http server on port 8080
 const webServer = http.createServer(app).listen(process.env.PORT || 8080);
 
 // Start Socket.io so it attaches itself to Express server
 const socketServer = socketIo.listen(webServer, { 'log level': 1 });
 
-socketServer.on('register', (data) => {
-  console.log(data);
-});
+
+app.get('/switch',(req,res)=>{
+pub.app('felladoor',(err,appobj)=>{
+    appobj.getMates('default',(err,data)=>{
+      console.log(Object.keys(data))
+      let people=Object.keys(data);
+      if(people.length>0){
+          socketServer.emit("message",randomize(people))
+      }else{
+        console.log("none")
+      }
+    })
+})
+
+})
+
+function randomize(data){
+  return data[Math.floor(Math.random()*data.length)];
+}
 
 
 //easyrtc.setOption('logLevel', 'debug');
@@ -34,8 +53,6 @@ easyrtc.events.on('easyrtcAuth', (socket, easyrtcid, msg, socketCallback, callba
       callback(err, connectionObj);
       return;
     }
-
-console.log(easyrtcid)
     connectionObj.setField('credential', msg.msgData.credential, { isShared: false });
 
 
