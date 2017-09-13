@@ -41,6 +41,8 @@
     "react": "^15.6.1",
     "react-countdown-clock": "^2.0.0",
     "react-dom": "^15.6.1",
+    "react-google-login": "^2.9.3",
+    "react-router": "^3.0.5",
     "react-webcam": "^0.2.0",
     "sass-loader": "^6.0.6",
     "socket.io": "^2.0.3",

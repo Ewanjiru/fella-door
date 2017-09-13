@@ -93,8 +93,12 @@
   padding: 10px;
   text-align: center;
   font-family: Roboto, sans-serif;
-  background-color: rgb(41, 98, 255);
+  background-color: rgba(41, 98, 255, 0.5);
   font-size: 1.5em;
+}
+
+.navi > h3 {
+  margin-right: 330px;
 }
 
 #thirst {
@@ -107,5 +111,22 @@
   color: rgb(41, 98, 255);
   text-align: center;
   font-family: Roboto, sans-serif;
+}
+
+div.Login {
+  background-image: url("https://photos.smugmug.com/Archives/Kenya/External-events/Andela-Kenya-Offsite-July-2017/i-CMGzsw2/0/c2bc41fa/X3/Andela_Kenya_Offsite-413-X3.jpg");
+  height: 800px;
+  width: 110%;
+  margin-left: -10px;
+}
+
+div.Login > div > div {
+  border-radius: 50px;
+  margin-top: 45%;
+}
+
+#logo {
+  height: 90px;
+  float: left;
 }
 

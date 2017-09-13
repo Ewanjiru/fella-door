@@ -8,10 +8,10 @@ import GoogleLogin from 'react-google-login';
 const style = {
     marginLeft: 30 + '%',
     marginTop: 10 + '%',
-    width: 40 + '%',
-    height: 200,
+    width: 36 + '%',
+    height: 120,
     color: 'white',
-    backgroundColor: blueA200,   
+    backgroundColor: "rgba(41, 98, 255, 0.5)",   
 };
 
 const responseGoogle = (response) => {
@@ -28,12 +28,13 @@ const responseGoogle = (response) => {
 class Login extends Component {
     render() {
         return (
-            <div>
+            <div className="Login">
             <div className="navi">
+            <img id="logo" src="https://pbs.twimg.com/profile_images/647544968777756672/-Ms_S6bh.png" />
             <h3>Felladoor</h3>
                 </div>
                 <Card style={style}>
-                    <h3 className="sign-in">Sign In To Get Started</h3>
+                    <h3 className="sign-in">Sign In With Google</h3>
                     <GoogleLogin
                         className="g-signin2"
                         clientId="1057566456731-upgq1plef7m7va2sc9ssigsvc1bqhbft.apps.googleusercontent.com"
