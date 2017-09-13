@@ -34,6 +34,18 @@ body{
   height:90px !important;
 }
 
+#controls{
+  position:fixed;
+  left:50% !important;
+  right:auto !important;
+  bottom:50px !important;
+}
+
+#controls button{
+  margin-left:10px !important;
+  margin-right:10px !important;
+}
+
 #otherClients {
   height:200px;
   overflow-y:scroll;
