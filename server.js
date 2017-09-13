@@ -34,7 +34,7 @@ pub.app('felladoor',(err,appobj)=>{
           let reciept=req.params.socket
 
           
-          socketServer.to(reciept).emit('message', randomize(people));
+          socketServer.emit('message', randomize(people));
       }else{
         console.log("none")
       }
