@@ -23,7 +23,7 @@ class Counter extends React.Component{
 
   Signalcall(){
     this.setState({time:0})
-    fetch("http://127.0.0.1:8080/switch")
+    fetch(window.location.origin+"/switch")
     console.log("yo")
   }
 

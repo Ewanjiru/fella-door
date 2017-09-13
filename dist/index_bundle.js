@@ -37787,7 +37787,7 @@ var Counter = function (_React$Component) {
     key: 'Signalcall',
     value: function Signalcall() {
       this.setState({ time: 0 });
-      fetch("http://127.0.0.1:8080/switch");
+      fetch(window.location.origin + "/switch");
       console.log("yo");
     }
   }, {
@@ -41122,7 +41122,7 @@ var Controls = function (_React$Component) {
                 'div',
                 { className: 'button_wrapper' },
                 _react2.default.createElement(_FloatingActionButton2.default, { label: 'Next', primary: true, onClick: function onClick() {
-                        fetch("http://127.0.0.1:8080/switch");
+                        fetch(window.location.origin + "/switch");
                     } }),
                 _react2.default.createElement(_FloatingActionButton2.default, { label: 'End', secondary: true })
             );
