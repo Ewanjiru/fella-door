@@ -5,14 +5,13 @@ import io from "socket.io-client";
 class Counter extends React.Component{
   constructor(props){
     super(props)
-    this.state={time:0}
+    this.state={time:0,socket:''}
     this.Signalcall=this.Signalcall.bind(this)
   }
 
   componentDidMount(){
     console.log("hellox")
     const socket = io();
-    console.log("hello data"+Object.keys(socket))
     this.Signalcall
     socket.on("message",(data)=>{
       console.log(this.state.time)
@@ -22,9 +21,9 @@ class Counter extends React.Component{
   }
 
   Signalcall(){
-    this.setState({time:0})
-    fetch(window.location.origin+"/switch")
-    console.log("yo")
+    console.log("hello data "+ socket.io.engine.id);
+    this.setState({time:0,socket:socket.io.engine.id})
+    fetch(window.location.origin+"/switch/"+socket.io.engine.id)
   }
 
   render(){

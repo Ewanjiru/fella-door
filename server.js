@@ -25,13 +25,16 @@ const webServer = http.createServer(app).listen(process.env.PORT || 8080);
 const socketServer = socketIo.listen(webServer, { 'log level': 1 });
 
 
-app.get('/switch',(req,res)=>{
+app.get('/switch/:socket',(req,res)=>{
 pub.app('felladoor',(err,appobj)=>{
     appobj.getMates('default',(err,data)=>{
       console.log(Object.keys(data))
       let people=Object.keys(data);
       if(people.length>0){
-          socketServer.emit("message",randomize(people))
+          let reciept=req.params.socket
+
+          
+          socketServer.to(reciept).emit('message', randomize(people));
       }else{
         console.log("none")
       }

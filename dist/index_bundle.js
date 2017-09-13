@@ -37763,7 +37763,7 @@ var Counter = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
 
-    _this.state = { time: 0 };
+    _this.state = { time: 0, socket: '' };
     _this.Signalcall = _this.Signalcall.bind(_this);
     return _this;
   }
@@ -37775,7 +37775,6 @@ var Counter = function (_React$Component) {
 
       console.log("hellox");
       var socket = (0, _socket2.default)();
-      console.log("hello data" + Object.keys(socket));
       this.Signalcall;
       socket.on("message", function (data) {
         console.log(_this2.state.time);
@@ -37786,9 +37785,9 @@ var Counter = function (_React$Component) {
   }, {
     key: 'Signalcall',
     value: function Signalcall() {
-      this.setState({ time: 0 });
-      fetch(window.location.origin + "/switch");
-      console.log("yo");
+      console.log("hello data " + socket.io.engine.id);
+      this.setState({ time: 0, socket: socket.io.engine.id });
+      fetch(window.location.origin + "/switch/" + socket.io.engine.id);
     }
   }, {
     key: 'render',

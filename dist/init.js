@@ -7,7 +7,6 @@ var connections=[]
 function connect() {
   socket.on("message",(data)=>{
     performCall(data)
-    alert(data)
   })
   easyrtc.setVideoDims(1280,720);
   easyrtc.setRoomOccupantListener(convertListToButtons);
